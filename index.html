@@ -8,6 +8,7 @@
   #output {
     font-size: 24px;
     margin-top: 10px;
+    font-weight: bold;
   }
 /* The switch - the box around the slider */
 .switch {
@@ -77,13 +78,13 @@ input:checked + .slider:before {
 </head>
 <body>
 
-<h1>Does Matheus Like Cloudflare?</h1>
+<p>Does Matheus Like Cloudflare?</p>
 <label class="switch">
   <input type="checkbox" id="toggle">
   <span class="slider round"></span>
 </label>
   
-<div id="output"></div>
+<div id="output" style=></div>
 
 <script>
   var toggle = document.getElementById("toggle");
