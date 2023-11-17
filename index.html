@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slider Demo</title>
+<title>Toggle Demo</title>
 <style>
   #output {
     font-size: 24px;
@@ -13,15 +13,22 @@
 </head>
 <body>
 
-<input type="range" min="1" max="100" value="50" id="slider">
+<label>
+  Toggle:
+  <input type="checkbox" id="toggle">
+</label>
 <div id="output"></div>
 
 <script>
-  var slider = document.getElementById("slider");
+  var toggle = document.getElementById("toggle");
   var output = document.getElementById("output");
 
-  slider.oninput = function() {
-    output.innerHTML = "No";
+  toggle.onchange = function() {
+    if (this.checked) {
+      output.innerHTML = "No";
+    } else {
+      output.innerHTML = "";
+    }
   }
 </script>
 
